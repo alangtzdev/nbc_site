@@ -37,14 +37,14 @@ var Layout = function () {
     }
 
     var handleHeaderPosition = function () {
-        var CurrentHeaderPosition = $(".header").offset().top;// current header's vertical position
+        var CurrentHeaderPosition = $("#navHead").offset().top;// current header's vertical position
         
         var headerFix = function(){
             var CurrentWindowPosition = $(window).scrollTop();// current vertical position
-            if (CurrentWindowPosition > CurrentHeaderPosition) {
-                $(".header").addClass("fixNav");
+            if ($(window).scrollTop() > 60) {
+                $("#navHead").addClass("fixNav");
             } else {
-                $(".header").removeClass("fixNav");
+                $("#navHead").removeClass("fixNav");
             }
         };
 
@@ -230,6 +230,9 @@ var Layout = function () {
             valignCenterMessage();
             valignCenterPortfolio();
             handleTheme();
+            $(window).scroll(function() {
+                handleHeaderPosition();
+            });
         },
     };
 }();
