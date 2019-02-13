@@ -36,6 +36,8 @@
 <!-- Page level plugin styles BEGIN -->
 <link href="css/animate.css" rel="stylesheet">
 <link href="plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
+<link href="plugins/waitme/waitMe.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="plugins/sweetalert.css">
 <!-- Page level plugin styles END -->
 <!-- Theme styles BEGIN -->
 <link href="css/components.css" rel="stylesheet">
@@ -48,7 +50,7 @@
 <!-- Theme styles END -->
 </head>
 <!--DOC: menu-always-on-top class to the body element to set menu on top -->
-<body class="menu-always-on-top">
+<body id="body" class="menu-always-on-top">
     <!-- BEGIN STYLE CUSTOMIZER -->
     <!-- <div class="color-panel">
         <div class="color-mode-icons icon-color"></div>
@@ -494,7 +496,7 @@
     <!-- Portfolio block BEGIN -->
     <div class="portfolio-block content content-center" id="portfolio">
         <div class="container">
-            <h2 class="margin-bottom-50">Latest <strong>works</strong></h2>
+            <h2 class="margin-bottom-50">Ultimos <strong>enviós</strong></h2>
         </div>
         <div class="row">
             <div class="item col-md-2 col-sm-6 col-xs-12">
@@ -972,7 +974,7 @@
     <!-- Testimonials block BEGIN -->
     <div class="testimonials-block content content-center margin-bottom-65">
         <div class="container">
-            <h2>Customer <strong>testimonials</strong></h2>
+            <h2>Recomendaciones de <strong>clientes</strong></h2>
             <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h4>
             <div class="carousel slide" data-ride="carousel" id="testimonials-block">
                 <!-- Wrapper for slides -->
@@ -1053,9 +1055,9 @@
                                     <!-- BEGIN BOTTOM CONTACTS -->
                                     <h2>Contacto</h2>
                                     <address class="margin-bottom-60">
-                                        35, Lorem Lis Street, Park Ave<br>
-                                        California, US<br>
-                                        Phone: 300 323 3456<br>
+                                        Benigno Arriaga No. 560, Barrio de Tequisquiapan<br>
+                                        San Luis Potosí, MX<br>
+                                        Telefono: 444 846 9932<br>
                                         Fax: 300 323 1456<br>
                                         Email: <a href="mailto:info@Systems.com">info@Systems.com</a><br>
                                         Skype: <a href="skype:Systems">Systems</a>
@@ -1067,17 +1069,13 @@
                     <!-- END BOTTOM CONTACTS -->
                     <div class="pre-footer-subscribe-box">
                         <h2>Enviar mensaje</h2>
-                        <form action="javascript:void(0);">
-            
-                            <input id="mce-FNAME" name="FNAME" type="text" class="form-control footer-input margin-bottom-20" placeholder="Nombre Apellido.."
+                        <form id="formContacto">            
+                        <input id="mce-FNAME" name="FNAME" type="text" class="form-control footer-input margin-bottom-20" placeholder="Nombre Apellido.."
                             required>
-                          <input id="mce-EMAIL" name="EMAIL" type="email" class="form-control footer-input margin-bottom-20" placeholder="Correo" required>
-                          <input id="mce-PHONE" name="PHONE" type="number" min="0" class="form-control footer-input margin-bottom-20 phone" placeholder="Ej. (999)-9999-999" required>
-                          <textarea id="mce-MENSAJE" name="MENSAJE" class="form-control footer-input margin-bottom-30" rows="6" placeholder="Mensaje" required></textarea>
-  
-                                    <button class="btn btn-primary" type="submit">Enviar</button>
-                             
-                       
+                        <input id="mce-EMAIL" name="EMAIL" type="email" class="form-control footer-input margin-bottom-20" placeholder="Correo" required>
+                        <input id="mce-PHONE" name="PHONE" type="number" min="0" class="form-control footer-input margin-bottom-20 phone" placeholder="Ej. (999)-9999-999" required>
+                        <textarea id="mce-MENSAJE" name="MENSAJE" class="form-control footer-input margin-bottom-30" rows="6" placeholder="Mensaje" required></textarea>
+                                    <button class="btn btn-primary" type="submit">Enviar</button>         
                         </form>
                     </div>
                 </div>
@@ -1137,10 +1135,15 @@
 <script src="plugins/jquery.parallax.js"></script>
 <script src="plugins/jquery.scrollTo.min.js"></script>
 <script src="plugins/jquery.nav.js"></script>
+<script src="plugins/jquery.validate.min.js"></script>
+<script src="plugins/waitme/waitMe.js"></script>
+<script src="plugins/sweetalert-dev.js"></script>
+<script src="js/components/messages_es.js"></script>
 <!-- Core plugins END (required only for current page) -->
 <!-- Global js BEGIN -->
 <script src="js/layout.js" type="text/javascript"></script>
 <script src="js/bs-carousel.js" type="text/javascript"></script>
+<script src="js/index.js" type="text/javascript"></script>
 <script>
     jQuery(document).ready(function() {
         Layout.init();
